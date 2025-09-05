@@ -99,3 +99,8 @@ export interface NewsData {
   news: NewsItem[];
   lastUpdated: string;
 }
+
+export interface CompanyData {
+  company: CompanyInfo;
+  lastUpdated: string;
+}
