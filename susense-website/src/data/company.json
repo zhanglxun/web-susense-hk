@@ -1,0 +1,31 @@
+{
+  "name": "香港速睿森视科技有限公司",
+  "englishName": "Susense Technology Co., Limited",
+  "tagline": "设计驱动，科技赋能",
+  "description": "自2019年成立以来，专注于为中小企业和大型金融客户提供专业的数字化转型服务。我们拥有丰富的行业经验，完成了餐饮管理系统、无人零售系统、教育培训系统、医疗健康管理系统等多个领域的项目。",
+  "founded": "2019",
+  "teamSize": {
+    "core": 10,
+    "partners": 10
+  },
+  "address": {
+    "chinese": "香港油尖旺区大角咀通州街雲之端1011室",
+    "english": "Room 1011, Cloud One, Tung Chau Street, Tai Kok Tsui, Yau Tsim Mong, Hong Kong"
+  },
+  "contact": {
+    "email": "zhanglixun@susense.cn",
+    "website": "susense.hk"
+  },
+  "services": [
+    "系统规划设计",
+    "UI/UX设计", 
+    "产品规划咨询",
+    "运营活动策划"
+  ],
+  "values": [
+    "用户体验优先",
+    "客户服务优先", 
+    "持续创新",
+    "专业可靠"
+  ]
+}

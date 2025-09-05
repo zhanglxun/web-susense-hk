@@ -1,0 +1,146 @@
+{
+  "cases": [
+    {
+      "id": "fintech-app-redesign",
+      "title": "大型金融APP交互设计升级",
+      "client": "保密金融客户",
+      "industry": "金融科技",
+      "description": "为大型金融机构的移动APP进行全面的交互设计升级，提升用户体验和业务转化率",
+      "challenge": "原有APP界面陈旧，用户体验不佳，业务流程复杂，用户流失率较高",
+      "solution": "采用倪爽设计风格，重新设计用户界面，优化业务流程，简化操作步骤，提升视觉效果",
+      "results": [
+        {
+          "metric": "用户活跃度",
+          "value": "+150%",
+          "description": "用户日活跃度显著提升150%"
+        },
+        {
+          "metric": "业务转化率",
+          "value": "+85%",
+          "description": "核心业务转化率提升85%"
+        },
+        {
+          "metric": "用户满意度",
+          "value": "4.8/5.0",
+          "description": "用户满意度评分达到4.8分"
+        }
+      ],
+      "images": {
+        "thumbnail": "/images/cases/fintech-app/thumbnail.webp",
+        "gallery": [
+          "/images/cases/fintech-app/before-after.webp",
+          "/images/cases/fintech-app/user-flow.webp",
+          "/images/cases/fintech-app/interface-design.webp"
+        ]
+      },
+      "technologies": [
+        "UI/UX设计",
+        "用户研究",
+        "原型设计",
+        "交互设计",
+        "视觉设计"
+      ],
+      "duration": "4个月",
+      "testimonial": {
+        "content": "速睿森视团队的专业能力令人印象深刻，他们不仅理解我们的业务需求，更能将复杂的金融产品通过优秀的设计变得简单易用。项目交付后，用户反馈非常积极。",
+        "author": "李总监",
+        "position": "产品总监",
+        "company": "某大型金融机构"
+      },
+      "featured": true
+    },
+    {
+      "id": "restaurant-management-system",
+      "title": "餐饮管理系统开发",
+      "client": "连锁餐饮企业",
+      "industry": "系统开发",
+      "description": "为连锁餐饮企业开发完整的管理系统，包括点餐、库存、财务等模块",
+      "challenge": "传统人工管理效率低下，数据统计困难，成本控制不精确",
+      "solution": "开发一体化餐饮管理系统，实现从点餐到财务的全流程数字化管理",
+      "results": [
+        {
+          "metric": "运营效率",
+          "value": "+200%",
+          "description": "整体运营效率提升200%"
+        },
+        {
+          "metric": "成本节约",
+          "value": "30%",
+          "description": "人力和管理成本节约30%"
+        },
+        {
+          "metric": "数据准确性",
+          "value": "99.5%",
+          "description": "数据统计准确性达到99.5%"
+        }
+      ],
+      "images": {
+        "thumbnail": "/images/cases/restaurant-system/thumbnail.webp",
+        "gallery": [
+          "/images/cases/restaurant-system/dashboard.webp",
+          "/images/cases/restaurant-system/pos-system.webp",
+          "/images/cases/restaurant-system/analytics.webp"
+        ]
+      },
+      "technologies": [
+        "React",
+        "Node.js",
+        "MySQL",
+        "微信小程序",
+        "云服务"
+      ],
+      "duration": "6个月",
+      "testimonial": {
+        "content": "这套系统完全改变了我们的运营方式，从混乱的人工管理变成了高效的数字化运营。投资回报率超出了我们的预期。",
+        "author": "张总经理",
+        "position": "总经理",
+        "company": "某连锁餐饮企业"
+      },
+      "featured": true
+    },
+    {
+      "id": "education-platform",
+      "title": "在线教育培训平台",
+      "client": "教育科技公司",
+      "industry": "数字化转型",
+      "description": "为教育机构打造在线教育平台，支持直播教学、作业管理、学习跟踪等功能",
+      "challenge": "线下教学受限，需要快速转型线上，保证教学质量和学习效果",
+      "solution": "开发功能完善的在线教育平台，集成直播、互动、管理等多项功能",
+      "results": [
+        {
+          "metric": "学员增长",
+          "value": "+300%",
+          "description": "平台学员数量增长300%"
+        },
+        {
+          "metric": "课程完成率",
+          "value": "92%",
+          "description": "学员课程完成率达到92%"
+        },
+        {
+          "metric": "教师满意度",
+          "value": "4.9/5.0",
+          "description": "教师对平台满意度4.9分"
+        }
+      ],
+      "images": {
+        "thumbnail": "/images/cases/education-platform/thumbnail.webp",
+        "gallery": [
+          "/images/cases/education-platform/live-class.webp",
+          "/images/cases/education-platform/student-dashboard.webp",
+          "/images/cases/education-platform/teacher-tools.webp"
+        ]
+      },
+      "technologies": [
+        "Vue.js",
+        "WebRTC",
+        "Socket.io",
+        "MongoDB",
+        "视频处理"
+      ],
+      "duration": "5个月",
+      "featured": false
+    }
+  ],
+  "lastUpdated": "2025-01-02T00:00:00Z"
+}
