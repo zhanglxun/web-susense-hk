@@ -1,11 +1,17 @@
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
+import { CasePreview } from '@/components/sections/CasePreview';
+import { ContactForm } from '@/components/sections/ContactForm';
+import { CompanyHighlights } from '@/components/sections/CompanyHighlights';
+import { loadCasesData } from '@/lib/data';
 
-export default function Home() {
+export default async function Home() {
+  const cases = await loadCasesData();
+
   return (
-    <main className="min-h-screen">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="gradient-orange py-20 px-6">
+      <section className="gradient-orange pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="hero-title">
             香港速睿森视科技有限公司
@@ -39,6 +45,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Company Highlights Section */}
+      <CompanyHighlights />
 
       {/* Services Section */}
       <section className="py-20 px-6">
@@ -122,6 +131,24 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+
+      {/* Case Preview Section */}
+      <CasePreview cases={cases} />
+
+      {/* Contact Form Section */}
+      <section className="py-20 px-6 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="section-title">
+              开始您的项目
+            </h2>
+            <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+              告诉我们您的需求，我们的专业团队将为您提供定制化的解决方案
+            </p>
+          </div>
+          <ContactForm />
+        </div>
+      </section>
+    </div>
   );
 }

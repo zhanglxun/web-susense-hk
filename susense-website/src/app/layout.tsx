@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 
 export const viewport = {
   width: 'device-width',
@@ -70,7 +72,11 @@ export default function RootLayout({
         }} />
       </head>
       <body className="antialiased">
-        {children}
+        <Header />
+        <main>
+          {children}
+        </main>
+        <Footer />
         
         {/* 性能监控脚本 */}
         <script
