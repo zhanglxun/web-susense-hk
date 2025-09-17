@@ -134,7 +134,7 @@ export function CasePreview({ cases }: CasePreviewProps) {
                             </div>
                             <div className="absolute top-4 right-4">
                               <span className="text-sm font-medium text-white bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
-                                {caseStudy.duration}
+                                {new Date(caseStudy.createdAt).getFullYear()}
                               </span>
                             </div>
                           </div>
@@ -144,7 +144,7 @@ export function CasePreview({ cases }: CasePreviewProps) {
                               {caseStudy.title}
                             </CardTitle>
                             <CardDescription className="text-sm font-medium text-gray-600">
-                              {caseStudy.client}
+                              {caseStudy.industry}
                             </CardDescription>
                           </CardHeader>
                           <CardContent className="space-y-4">
@@ -152,59 +152,26 @@ export function CasePreview({ cases }: CasePreviewProps) {
                               {caseStudy.description}
                             </p>
                             
-                            {/* 成果展示 */}
-                            <div className="space-y-3">
-                              {caseStudy.results.slice(0, 2).map((result, index) => (
-                                <div key={index} className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                                  <span className="text-sm text-text-secondary font-medium">
-                                    {result.metric}
-                                  </span>
-                                  <span className="text-lg font-bold text-primary-orange">
-                                    {result.value}
-                                  </span>
-                                </div>
-                              ))}
+                            {/* 项目信息 */}
+                            <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                              <span className="text-sm text-text-secondary font-medium">
+                                项目状态
+                              </span>
+                              <span className="text-lg font-bold text-primary-orange">
+                                已完成
+                              </span>
                             </div>
 
-                            {/* 技术标签 */}
+                            {/* 行业标签 */}
                             <div className="flex flex-wrap gap-2">
-                              {caseStudy.technologies.slice(0, 3).map((tech, index) => (
-                                <span
-                                  key={index}
-                                  className="text-xs bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium"
-                                >
-                                  {tech}
-                                </span>
-                              ))}
-                              {caseStudy.technologies.length > 3 && (
-                                <span className="text-xs text-gray-500 px-3 py-1">
-                                  +{caseStudy.technologies.length - 3} 更多
-                                </span>
-                              )}
+                              <span className="text-xs bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium">
+                                {caseStudy.industry}
+                              </span>
+                              <span className="text-xs bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium">
+                                数字化转型
+                              </span>
                             </div>
 
-                            {/* 客户证言 */}
-                            {caseStudy.testimonial && (
-                              <div className="pt-4 border-t border-gray-100">
-                                <div className="flex items-start space-x-3">
-                                  <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span className="text-orange-600 font-bold text-sm">
-                                      {caseStudy.testimonial.author.charAt(0)}
-                                    </span>
-                                  </div>
-                                  <div className="flex-1">
-                                    <p className="text-sm text-gray-600 italic mb-2">
-                                      "{caseStudy.testimonial.content}"
-                                    </p>
-                                    <div className="text-xs text-gray-500">
-                                      <span className="font-medium">{caseStudy.testimonial.author}</span>
-                                      <span className="mx-1">·</span>
-                                      <span>{caseStudy.testimonial.position}</span>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            )}
 
                             <Button variant="secondary" size="sm" className="w-full mt-4 group-hover:bg-orange-500 group-hover:text-white transition-colors duration-300">
                               查看详情

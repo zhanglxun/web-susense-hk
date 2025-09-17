@@ -13,8 +13,8 @@ export async function loadCasesData(): Promise<CaseStudy[]> {
 
 export async function loadServicesData(): Promise<Service[]> {
   try {
-    const data: ServicesData = await import('../data/services.json');
-    return data.services || [];
+    const data: any = await import('../data/services.json');
+    return (data.default?.services || data.services || []) as Service[];
   } catch (error) {
     console.warn('Failed to load services.json, using fallback data');
     return getFallbackServices();
@@ -23,8 +23,8 @@ export async function loadServicesData(): Promise<Service[]> {
 
 export async function loadCompanyData(): Promise<CompanyInfo> {
   try {
-    const data: CompanyData = await import('../data/company.json');
-    return data;
+    const data: any = await import('../data/company.json');
+    return (data.default?.company || data.company || data) as CompanyInfo;
   } catch (error) {
     console.warn('Failed to load company.json, using fallback data');
     return getFallbackCompany();
@@ -37,30 +37,11 @@ function getFallbackCases(): CaseStudy[] {
     {
       id: 'fallback-1',
       title: '金融APP设计优化',
-      client: '保密客户',
       industry: '金融科技',
       description: '专业的金融APP界面设计和用户体验优化服务，帮助客户提升用户满意度和业务转化率。',
-      challenge: '原有APP界面陈旧，用户体验不佳，业务流程复杂',
-      solution: '采用现代化设计理念，重新设计用户界面，优化业务流程',
-      results: [
-        {
-          metric: '用户活跃度',
-          value: '+120%',
-          description: '用户日活跃度显著提升'
-        },
-        {
-          metric: '业务转化率',
-          value: '+75%',
-          description: '核心业务转化率大幅提升'
-        }
-      ],
-      images: {
-        thumbnail: '/images/placeholder-case.webp',
-        gallery: ['/images/placeholder-case.webp']
-      },
-      technologies: ['UI/UX设计', '用户研究', '原型设计'],
-      duration: '3个月',
-      featured: true
+      image: '/images/cases/jumper1.png',
+      featured: true,
+      createdAt: '2024-01-01T00:00:00Z'
     }
   ];
 }
@@ -126,22 +107,22 @@ function getFallbackCompany(): CompanyInfo {
 }
 
 // 数据验证函数
-export function validateCaseData(cases: any[]): CaseStudy[] {
-  return cases.filter(caseItem => {
-    const isValid = caseItem.id && caseItem.title && caseItem.client && caseItem.industry;
+export function validateCaseData(cases: unknown[]): CaseStudy[] {
+  return cases.filter((caseItem: any) => {
+    const isValid = caseItem.id && caseItem.title && caseItem.industry;
     if (!isValid) {
       console.warn('Invalid case data:', caseItem);
     }
     return isValid;
-  });
+  }) as CaseStudy[];
 }
 
-export function validateServiceData(services: any[]): Service[] {
-  return services.filter(service => {
+export function validateServiceData(services: unknown[]): Service[] {
+  return services.filter((service: any) => {
     const isValid = service.id && service.name && service.category;
     if (!isValid) {
       console.warn('Invalid service data:', service);
     }
     return isValid;
-  });
+  }) as Service[];
 }
