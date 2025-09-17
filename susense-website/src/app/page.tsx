@@ -266,9 +266,9 @@ export default async function Home() {
           
           {/* 服务流程展示 */}
           <div className="mb-16">
-            <h3 className="text-2xl font-bold text-center mb-12 text-gray-800">
+            <h2 className="section-title mb-6">
               我们的服务流程
-            </h3>
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center group">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors duration-300">
@@ -369,7 +369,7 @@ export default async function Home() {
       <section id="clients" className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">
+            <h2 className="section-title mb-6">
               我们服务的客户
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -378,25 +378,84 @@ export default async function Home() {
           </div>
           
           {/* Logo展示区域 */}
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            {/* 预留logo位置 - 您后续可以添加实际的logo图片 */}
-            <div className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200">
-              <span className="text-gray-400 text-sm font-medium">客户Logo 1</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center justify-items-center">
+            {/* 客户Logo展示 - 按指定顺序排列 */}
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/zhongyinguoji.png" 
+                alt="中银国际" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
             </div>
-            <div className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200">
-              <span className="text-gray-400 text-sm font-medium">客户Logo 2</span>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/haoshi_bio.png" 
+                alt="豪石生物" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
             </div>
-            <div className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200">
-              <span className="text-gray-400 text-sm font-medium">客户Logo 3</span>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/zhihui-iot.png" 
+                alt="智荟物联" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
             </div>
-            <div className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200">
-              <span className="text-gray-400 text-sm font-medium">客户Logo 4</span>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/puhui.png" 
+                alt="朴慧智能" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
             </div>
-            <div className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200">
-              <span className="text-gray-400 text-sm font-medium">客户Logo 5</span>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/pxn.svg" 
+                alt="PXN" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
             </div>
-            <div className="w-32 h-16 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200">
-              <span className="text-gray-400 text-sm font-medium">客户Logo 6</span>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/lanwo.svg" 
+                alt="蓝沃服饰" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
+            </div>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/siyinghong.png" 
+                alt="思颖红服饰" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
+            </div>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/zhaozhubao.svg" 
+                alt="找珠宝网" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
+            </div>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/xiaozuzu.svg" 
+                alt="小租租" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
+            </div>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/hicross.svg" 
+                alt="HiCross" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
+            </div>
+            <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
+              <img 
+                src="/images/clients/lianhuikeji.png" 
+                alt="莲花科技" 
+                className="w-full h-full object-contain transition-all duration-300"
+              />
             </div>
           </div>
           
