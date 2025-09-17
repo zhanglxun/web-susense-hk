@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
-import { CasePreview } from '@/components/sections/CasePreview';
+import { CaseCarousel } from '@/components/sections/CaseCarousel';
 import { CompanyHighlights } from '@/components/sections/CompanyHighlights';
 import { loadCasesData } from '@/lib/data';
 
@@ -360,9 +360,9 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Case Preview Section */}
+      {/* Case Carousel Section */}
       <section id="cases">
-        <CasePreview cases={cases} />
+        <CaseCarousel cases={cases} />
       </section>
 
       {/* Client Logos Section */}

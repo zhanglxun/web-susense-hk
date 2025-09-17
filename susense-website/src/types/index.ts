@@ -3,29 +3,11 @@
 export interface CaseStudy {
   id: string;
   title: string;
-  client: string;
-  industry: "金融科技" | "数字化转型" | "系统开发" | "UI/UX设计";
+  industry: string;
   description: string;
-  challenge: string;
-  solution: string;
-  results: {
-    metric: string;
-    value: string;
-    description: string;
-  }[];
-  images: {
-    thumbnail: string;
-    gallery: string[];
-  };
-  technologies: string[];
-  duration: string;
-  testimonial?: {
-    content: string;
-    author: string;
-    position: string;
-    company: string;
-  };
+  image: string;
   featured: boolean;
+  createdAt: string;
 }
 
 export interface Service {
