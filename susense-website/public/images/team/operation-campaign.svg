@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102" height="102" viewBox="0 0 102 102" fill="none">
+  <g clip-path="url(#clip0_operation)">
+    <!-- 中心创意泡泡 -->
+    <circle cx="51" cy="51" r="15" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M46 51H56M51 46V56" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- 发散思维线 -->
+    <path d="M36 36L41 41" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    <path d="M66 36L61 41" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    <path d="M36 66L41 61" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    <path d="M66 66L61 61" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- 外圈创意点子 -->
+    <!-- 左上 -->
+    <circle cx="30" cy="30" r="8" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M26 30H34M30 26V34" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+    
+    <!-- 右上 -->
+    <circle cx="72" cy="30" r="8" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M68 30H76M72 26V34" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+    
+    <!-- 左下 -->
+    <circle cx="30" cy="72" r="8" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M26 72H34M30 68V76" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+    
+    <!-- 右下 -->
+    <circle cx="72" cy="72" r="8" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M68 72H76M72 68V76" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+    
+    <!-- 活动元素 -->
+    <!-- 喇叭 -->
+    <path d="M15 20L20 15L25 20L25 25L20 30L15 25Z" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M20 15L20 10" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- 奖杯 -->
+    <path d="M77 15L82 20L82 25L80 25L80 30L74 30L74 25L72 25L72 20Z" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M75 15L75 10" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    <path d="M79 15L79 10" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- 用户图标 -->
+    <circle cx="15" cy="80" r="6" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M10 85C10 82 12 80 15 80C18 80 20 82 20 85" stroke="black" stroke-width="2" stroke-linecap="round" fill="none"/>
+    
+    <!-- 增长箭头 -->
+    <path d="M85 80L85 75L90 75" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    <path d="M87 77L90 75L87 73" stroke="black" stroke-width="2" stroke-linecap="round" fill="none"/>
+    
+    <!-- 连接线到中心 -->
+    <path d="M23 23L36 36" stroke="black" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
+    <path d="M79 23L66 36" stroke="black" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
+    <path d="M23 79L36 66" stroke="black" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
+    <path d="M79 79L66 66" stroke="black" stroke-width="1" stroke-linecap="round" stroke-dasharray="2 2"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_operation">
+      <rect width="102" height="102" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>

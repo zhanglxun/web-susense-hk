@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="102" height="102" viewBox="0 0 102 102" fill="none">
+  <g clip-path="url(#clip0_consulting)">
+    <!-- 图表框架 -->
+    <rect x="15" y="15" width="72" height="72" rx="4" stroke="black" stroke-width="2" fill="none"/>
+    
+    <!-- X轴和Y轴 -->
+    <path d="M20 80H85M20 80V20" stroke="black" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- 数据柱状图 -->
+    <rect x="25" y="60" width="8" height="20" fill="black"/>
+    <rect x="35" y="45" width="8" height="35" fill="black"/>
+    <rect x="45" y="35" width="8" height="45" fill="black"/>
+    <rect x="55" y="25" width="8" height="55" fill="black"/>
+    <rect x="65" y="40" width="8" height="40" fill="black"/>
+    <rect x="75" y="50" width="8" height="30" fill="black"/>
+    
+    <!-- 趋势线 -->
+    <path d="M25 65L35 50L45 40L55 30L65 45L75 55" stroke="black" stroke-width="2" stroke-linecap="round" fill="none" stroke-dasharray="3 3"/>
+    
+    <!-- 饼图 -->
+    <circle cx="25" cy="25" r="12" stroke="black" stroke-width="2" fill="none"/>
+    <path d="M25 13A12 12 0 0 1 35 35" stroke="black" stroke-width="2" fill="black"/>
+    <path d="M35 35A12 12 0 0 1 25 37" stroke="black" stroke-width="2" fill="none"/>
+    
+    <!-- 分析工具 -->
+    <rect x="65" y="15" width="15" height="10" rx="2" stroke="black" stroke-width="1.5" fill="none"/>
+    <circle cx="68" cy="20" r="1" fill="black"/>
+    <circle cx="71" cy="20" r="1" fill="black"/>
+    <circle cx="74" cy="20" r="1" fill="black"/>
+    
+    <!-- 箭头指示 -->
+    <path d="M50 10L50 5M47 8L50 5L53 8" stroke="black" stroke-width="2" stroke-linecap="round" fill="none"/>
+    
+    <!-- 数据点 -->
+    <circle cx="30" cy="70" r="1.5" fill="black"/>
+    <circle cx="40" cy="55" r="1.5" fill="black"/>
+    <circle cx="50" cy="45" r="1.5" fill="black"/>
+    <circle cx="60" cy="35" r="1.5" fill="black"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_consulting">
+      <rect width="102" height="102" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>

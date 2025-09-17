@@ -87,7 +87,7 @@ export default async function Home() {
                   <div className="text-sm text-white/60 mt-1">资深专家团队</div>
                 </div>
                 <div className="text-center group">
-                  <div className="text-5xl font-bold mb-3 text-white group-hover:scale-110 transition-transform duration-300">100+</div>
+                  <div className="text-5xl font-bold mb-3 text-white group-hover:scale-110 transition-transform duration-300">50+</div>
                   <div className="text-lg text-white/80 font-medium">成功项目</div>
                   <div className="text-sm text-white/60 mt-1">行业领先经验</div>
                 </div>
@@ -142,7 +142,9 @@ export default async function Home() {
             {/* 系统规划设计 */}
             <Card variant="white" className="group hover:shadow-2xl transition-all duration-300">
               <CardHeader className="pb-4">
-                <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">💡</div>
+                <div className="w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+                  <img src="/images/team/system-design.svg" alt="系统规划设计" className="w-full h-full" />
+                </div>
                 <CardTitle className="text-xl mb-3">系统规划设计</CardTitle>
                 <div className="w-12 h-1 bg-orange-400 rounded-full"></div>
               </CardHeader>

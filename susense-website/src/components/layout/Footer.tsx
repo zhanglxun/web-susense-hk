@@ -1,19 +1,19 @@
-import Link from 'next/link';
 import { Card } from '@/components/ui/Card';
 
 const quickLinks = [
-  { name: '首页', href: '/' },
-  { name: '服务项目', href: '/services' },
-  { name: '案例展示', href: '/cases' },
-  { name: '关于我们', href: '/about' },
-  { name: '联系我们', href: '/contact' },
+  { name: '首页', href: '#home' },
+  { name: '关于我们', href: '#about' },
+  { name: '服务项目', href: '#services' },
+  { name: '案例展示', href: '#cases' },
+  { name: '客户展示', href: '#clients' },
+  { name: '联系我们', href: '#contact' },
 ];
 
 const services = [
-  { name: '系统规划设计', href: '/services#system-planning' },
-  { name: 'UI/UX设计', href: '/services#ui-ux-design' },
-  { name: '产品规划咨询', href: '/services#product-consulting' },
-  { name: '运营活动策划', href: '/services#operation-planning' },
+  { name: '系统规划设计', href: '#services' },
+  { name: 'UI/UX设计', href: '#services' },
+  { name: '产品规划咨询', href: '#services' },
+  { name: '运营活动策划', href: '#services' },
 ];
 
 const socialLinks = [
@@ -26,9 +26,9 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* 公司信息 */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <div className="mb-6">
               <div className="text-2xl font-bold text-primary-orange mb-4">
                 香港速睿森视科技有限公司
@@ -46,16 +46,16 @@ export function Footer() {
 
           {/* 快速链接 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">快速链接</h3>
+            <h3 className="text-lg font-semibold mb-4">快速导航</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-gray-300 hover:text-primary-orange transition-colors duration-200"
                   >
                     {link.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -63,16 +63,16 @@ export function Footer() {
 
           {/* 服务项目 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">服务项目</h3>
+            <h3 className="text-lg font-semibold mb-4">核心服务</h3>
             <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
-                  <Link
+                  <a
                     href={service.href}
                     className="text-gray-300 hover:text-primary-orange transition-colors duration-200"
                   >
                     {service.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
