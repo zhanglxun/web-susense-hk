@@ -1,0 +1,43 @@
+<svg width="240" height="72" viewBox="0 0 240 72" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="36" cy="36" r="30" fill="#2563EB" opacity="0.1"/>
+  
+  <!-- 主图形 - 抽象的眼睛和森林 -->
+  <g transform="translate(36, 36)">
+    <!-- 眼睛轮廓 -->
+    <ellipse cx="0" cy="0" rx="14" ry="10" fill="none" stroke="#2563EB" stroke-width="2.5"/>
+    
+    <!-- 瞳孔 -->
+    <circle cx="0" cy="0" r="5" fill="#2563EB"/>
+    
+    <!-- 森林元素 - 三个三角形代表树木 -->
+    <g transform="translate(-10, -6)">
+      <polygon points="0,10 2.5,5 5,10" fill="#3B82F6"/>
+    </g>
+    <g transform="translate(-2.5, -4)">
+      <polygon points="0,8 2,4 4,8" fill="#2563EB"/>
+    </g>
+    <g transform="translate(5, -6)">
+      <polygon points="0,10 2.5,5 5,10" fill="#3B82F6"/>
+    </g>
+    
+    <!-- 速度线条 -->
+    <g transform="translate(18, -10)">
+      <line x1="0" y1="0" x2="10" y2="0" stroke="#2563EB" stroke-width="2" opacity="0.7"/>
+      <line x1="0" y1="2.5" x2="8" y2="2.5" stroke="#2563EB" stroke-width="2" opacity="0.5"/>
+      <line x1="0" y1="5" x2="6" y2="5" stroke="#2563EB" stroke-width="2" opacity="0.3"/>
+    </g>
+  </g>
+  
+  <!-- 文字部分 -->
+  <g transform="translate(84, 24)">
+    <!-- 中文名称 -->
+    <text x="0" y="18" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" font-weight="600" fill="#1F2937">
+      香港速睿森视
+    </text>
+    <!-- 英文名称 -->
+    <text x="0" y="38" font-family="'Arial', sans-serif" font-size="12" font-weight="400" fill="#6B7280">
+      SUSENSE TECHNOLOGY
+    </text>
+  </g>
+</svg>

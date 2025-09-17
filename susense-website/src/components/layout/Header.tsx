@@ -46,8 +46,12 @@ export function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <div className="text-2xl font-bold text-primary-orange">
-                速睿森视
+              <div className="h-14 w-auto">
+                <img 
+                  src="/logo.svg" 
+                  alt="香港速睿森视科技有限公司" 
+                  className="h-14 w-auto"
+                />
               </div>
             </Link>
           </div>

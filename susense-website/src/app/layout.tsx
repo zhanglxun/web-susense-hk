@@ -17,6 +17,14 @@ export const metadata: Metadata = {
   creator: "香港速睿森视科技有限公司",
   publisher: "香港速睿森视科技有限公司",
   robots: "index, follow",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/logo-icon.svg', sizes: '48x48', type: 'image/svg+xml' }
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/logo-icon.svg',
+  },
   openGraph: {
     type: "website",
     locale: "zh_HK",
