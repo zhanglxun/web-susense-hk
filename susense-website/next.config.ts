@@ -1,10 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 图片优化
+  // 静态导出配置
+  output: 'export',
+  trailingSlash: true,
+  skipTrailingSlashRedirect: true,
+  
+  // 图片优化 - 静态导出时需要禁用优化
   images: {
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 768, 1024, 1280, 1920],
+    unoptimized: true,
   },
   
   // 性能优化
@@ -18,6 +22,9 @@ const nextConfig: NextConfig = {
   
   // 静态生成优化
   generateEtags: false,
+  
+  // 资源路径配置 - 适配 OSS
+  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
 };
 
 export default nextConfig;
