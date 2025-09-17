@@ -71,19 +71,6 @@ export interface CompanyInfo {
   values: string[];
 }
 
-export interface NewsItem {
-  id: string;
-  title: string;
-  summary: string;
-  content: string;
-  category: "公司动态" | "行业洞察" | "技术分享" | "客户成功";
-  publishDate: string;
-  author: string;
-  tags: string[];
-  image?: string;
-  featured: boolean;
-}
-
 // 数据容器类型
 export interface CasesData {
   cases: CaseStudy[];
@@ -92,11 +79,6 @@ export interface CasesData {
 
 export interface ServicesData {
   services: Service[];
-  lastUpdated: string;
-}
-
-export interface NewsData {
-  news: NewsItem[];
   lastUpdated: string;
 }
 

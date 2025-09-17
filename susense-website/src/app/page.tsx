@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { CasePreview } from '@/components/sections/CasePreview';
-import { ContactForm } from '@/components/sections/ContactForm';
 import { CompanyHighlights } from '@/components/sections/CompanyHighlights';
 import { loadCasesData } from '@/lib/data';
 
@@ -12,7 +11,7 @@ export default async function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden">
+      <section id="home" className="relative overflow-hidden">
         {/* 使用指定的背景颜色 */}
         <div className="absolute inset-0" style={{ backgroundColor: 'hsl(19.37deg 91.3% 59.41%)' }}></div>
         
@@ -32,19 +31,14 @@ export default async function Home() {
         <div className="absolute top-36 left-1/8 w-6 h-6 bg-white/55 rounded-full"></div>
         <div className="absolute top-52 right-1/8 w-5 h-5 bg-white/50 rounded-full"></div>
         <div className="absolute top-68 left-1/3 w-7 h-7 bg-white/40 rounded-full"></div>
-        <div className="absolute bottom-28 right-1/7 w-9 h-9 bg-white/35 rounded-full"></div>
-        <div className="absolute bottom-44 left-1/4 w-4 h-4 bg-white/60 rounded-full"></div>
-        <div className="absolute bottom-60 right-1/3 w-6 h-6 bg-white/45 rounded-full"></div>
-        <div className="absolute top-1/4 right-1/12 w-3 h-3 bg-white/70 rounded-full"></div>
-        <div className="absolute bottom-1/4 left-1/12 w-5 h-5 bg-white/50 rounded-full"></div>
-        <div className="absolute top-3/4 right-1/10 w-4 h-4 bg-white/55 rounded-full"></div>
+       
         
         {/* 网格背景 */}
         <div className="absolute inset-0 opacity-20" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.08'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
         
-        <div className="relative z-10 pt-32 pb-24 px-6">
+        <div className="relative z-10 pt-24 pb-16 px-6">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               {/* 主标题 - 大字号口号语 */}
@@ -60,7 +54,7 @@ export default async function Home() {
               
               {/* CTA按钮组 */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-                <Link href="/contact">
+                <a href="#contact">
                   <Button 
                     variant="black" 
                     size="lg" 
@@ -68,8 +62,8 @@ export default async function Home() {
                   >
                     🚀 开始设计咨询
                   </Button>
-                </Link>
-                <Link href="/about">
+                </a>
+                <a href="#about">
                   <Button 
                     variant="secondary" 
                     size="lg" 
@@ -77,7 +71,7 @@ export default async function Home() {
                   >
                     💡 了解我们
                   </Button>
-                </Link>
+                </a>
           </div>
           
               {/* 核心数据展示 */}
@@ -102,18 +96,18 @@ export default async function Home() {
             
             {/* 信任指标条 */}
             <div className="mt-16 pt-8 border-t border-white/20">
-              <div className="flex flex-wrap justify-center items-center gap-8 text-white/70 text-sm">
+              <div className="flex flex-wrap justify-center items-center gap-8 text-white/70 text-base">
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  <span>专业认证团队</span>
+                  <span>资深专家团队</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                  <span>24小时技术支持</span>
+                  <span>及时技术支持</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>
-                  <span>100%项目成功率</span>
+                  <span>可靠项目交付</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
@@ -126,10 +120,12 @@ export default async function Home() {
       </section>
 
       {/* Company Highlights Section */}
-      <CompanyHighlights />
+      <section id="about">
+        <CompanyHighlights />
+      </section>
 
       {/* Services Section */}
-      <section className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white">
+      <section id="services" className="py-24 px-6 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           {/* 标题区域 */}
           <div className="text-center mb-16">
@@ -365,10 +361,12 @@ export default async function Home() {
       </section>
 
       {/* Case Preview Section */}
-      <CasePreview cases={cases} />
+      <section id="cases">
+        <CasePreview cases={cases} />
+      </section>
 
       {/* Client Logos Section */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section id="clients" className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
@@ -426,7 +424,31 @@ export default async function Home() {
         </div>
       </section>
 
-     
+      {/* Contact Section */}
+      <section id="contact" className="py-24 px-6 bg-gradient-to-r from-orange-500 to-orange-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">准备开始您的数字化转型之旅？</h2>
+          <p className="text-xl text-white/90 mb-8 leading-relaxed">
+            联系我们，让我们的专业团队为您提供定制化的解决方案
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button 
+              variant="black" 
+              size="lg" 
+              className="px-8 py-4 text-lg font-semibold"
+            >
+              立即咨询
+            </Button>
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="px-8 py-4 text-lg font-semibold bg-white/15 border-2 border-white/30 text-white hover:bg-white hover:text-orange-600"
+            >
+              查看案例
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -33,10 +33,10 @@ export function CompanyHighlights() {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">
-            我们的实力与成就
+            专业团队 卓越成果
           </h2>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            用数据说话，用成果证明我们的专业能力和服务价值
+            深耕行业多年，我们深知如何将技术转化为商业价值
           </p>
         </div>
 

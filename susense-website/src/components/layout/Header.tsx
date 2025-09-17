@@ -12,11 +12,11 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: '首页', href: '/' },
-  { name: '服务项目', href: '/services' },
-  { name: '案例展示', href: '/cases' },
-  { name: '关于我们', href: '/about' },
-  { name: '联系我们', href: '/contact' },
+  { name: '首页', href: '#home' },
+  { name: '关于我们', href: '#about' },
+  { name: '服务项目', href: '#services' },
+  { name: '案例展示', href: '#cases' },
+  { name: '联系我们', href: '#contact' },
 ];
 
 export function Header() {
