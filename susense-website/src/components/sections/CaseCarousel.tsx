@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card } from '@/components/ui/Card';
 
@@ -22,6 +22,20 @@ export function CaseCarousel({ cases }: CaseCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
+  const nextCase = useCallback(() => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev + 1) % cases.length);
+    setTimeout(() => setIsTransitioning(false), 300);
+  }, [isTransitioning, cases.length]);
+
+  const prevCase = useCallback(() => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex((prev) => (prev - 1 + cases.length) % cases.length);
+    setTimeout(() => setIsTransitioning(false), 300);
+  }, [isTransitioning, cases.length]);
+
   // 自动播放功能（可选）
   useEffect(() => {
     const timer = setInterval(() => {
@@ -31,21 +45,7 @@ export function CaseCarousel({ cases }: CaseCarouselProps) {
     }, 5000); // 5秒自动切换
 
     return () => clearInterval(timer);
-  }, [currentIndex, isTransitioning]);
-
-  const nextCase = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev + 1) % cases.length);
-    setTimeout(() => setIsTransitioning(false), 300);
-  };
-
-  const prevCase = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setCurrentIndex((prev) => (prev - 1 + cases.length) % cases.length);
-    setTimeout(() => setIsTransitioning(false), 300);
-  };
+  }, [currentIndex, isTransitioning, nextCase]);
 
   const goToCase = (index: number) => {
     if (isTransitioning || index === currentIndex) return;
@@ -66,7 +66,7 @@ export function CaseCarousel({ cases }: CaseCarouselProps) {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isTransitioning]);
+  }, [isTransitioning, nextCase, prevCase]);
 
   if (!cases || cases.length === 0) {
     return (

@@ -46,10 +46,6 @@ export function CasePreview({ cases }: CasePreviewProps) {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
   };
 
-  const getCurrentSlideCases = () => {
-    const start = currentSlide * slidesPerView;
-    return currentCases.slice(start, start + slidesPerView);
-  };
 
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-white to-gray-50">

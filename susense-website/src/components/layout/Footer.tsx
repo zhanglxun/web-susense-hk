@@ -1,4 +1,3 @@
-import { Card } from '@/components/ui/Card';
 
 const quickLinks = [
   { name: '首页', href: '#home' },

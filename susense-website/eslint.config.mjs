@@ -20,6 +20,12 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
+  {
+    rules: {
+      // 禁用图片元素警告，因为我们使用静态导出
+      "@next/next/no-img-element": "off",
+    },
+  },
 ];
 
 export default eslintConfig;

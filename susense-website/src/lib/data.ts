@@ -1,11 +1,11 @@
-import { CaseStudy, Service, CompanyInfo, CasesData, ServicesData, CompanyData } from '@/types';
+import { CaseStudy, Service, CompanyInfo, CasesData } from '@/types';
 
 // 数据加载函数
 export async function loadCasesData(): Promise<CaseStudy[]> {
   try {
     const data: CasesData = await import('../data/cases.json');
     return data.cases || [];
-  } catch (error) {
+  } catch {
     console.warn('Failed to load cases.json, using fallback data');
     return getFallbackCases();
   }
@@ -13,9 +13,9 @@ export async function loadCasesData(): Promise<CaseStudy[]> {
 
 export async function loadServicesData(): Promise<Service[]> {
   try {
-    const data: any = await import('../data/services.json');
+    const data = await import('../data/services.json') as { default?: { services?: Service[] }, services?: Service[] };
     return (data.default?.services || data.services || []) as Service[];
-  } catch (error) {
+  } catch {
     console.warn('Failed to load services.json, using fallback data');
     return getFallbackServices();
   }
@@ -23,9 +23,9 @@ export async function loadServicesData(): Promise<Service[]> {
 
 export async function loadCompanyData(): Promise<CompanyInfo> {
   try {
-    const data: any = await import('../data/company.json');
+    const data = await import('../data/company.json') as { default?: { company?: CompanyInfo }, company?: CompanyInfo } & CompanyInfo;
     return (data.default?.company || data.company || data) as CompanyInfo;
-  } catch (error) {
+  } catch {
     console.warn('Failed to load company.json, using fallback data');
     return getFallbackCompany();
   }
@@ -108,8 +108,9 @@ function getFallbackCompany(): CompanyInfo {
 
 // 数据验证函数
 export function validateCaseData(cases: unknown[]): CaseStudy[] {
-  return cases.filter((caseItem: any) => {
-    const isValid = caseItem.id && caseItem.title && caseItem.industry;
+  return cases.filter((caseItem) => {
+    const item = caseItem as Record<string, unknown>;
+    const isValid = item.id && item.title && item.industry;
     if (!isValid) {
       console.warn('Invalid case data:', caseItem);
     }
@@ -118,8 +119,9 @@ export function validateCaseData(cases: unknown[]): CaseStudy[] {
 }
 
 export function validateServiceData(services: unknown[]): Service[] {
-  return services.filter((service: any) => {
-    const isValid = service.id && service.name && service.category;
+  return services.filter((service) => {
+    const item = service as Record<string, unknown>;
+    const isValid = item.id && item.name && item.category;
     if (!isValid) {
       console.warn('Invalid service data:', service);
     }
