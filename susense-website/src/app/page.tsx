@@ -397,7 +397,7 @@ export default async function Home() {
             </div>
             <div className="w-36 h-20 bg-white rounded-lg shadow-sm flex items-center justify-center border border-gray-200 p-2 hover:shadow-md transition-shadow duration-300">
               <img 
-                src="/images/clients/zhihui-iot.png" 
+                src="/images/clients/zhihui_iot.png" 
                 alt="智荟物联" 
                 className="w-full h-full object-contain transition-all duration-300"
               />
