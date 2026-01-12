@@ -47,9 +47,9 @@ export function Header() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <div className="h-14 w-auto">
-                <img 
-                  src="/logo.svg" 
-                  alt="香港速睿森视科技有限公司" 
+                <img
+                  src="/images/logo.png"
+                  alt="香港速睿森视科技有限公司"
                   className="h-14 w-auto"
                 />
               </div>
@@ -67,8 +67,8 @@ export function Header() {
                   item.current
                     ? 'text-primary-orange'
                     : isScrolled
-                    ? 'text-gray-700 hover:text-primary-orange'
-                    : 'text-white hover:text-primary-orange'
+                      ? 'text-gray-700 hover:text-primary-orange'
+                      : 'text-white hover:text-primary-orange'
                 )}
               >
                 {item.name}
